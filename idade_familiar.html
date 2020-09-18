@@ -1,0 +1,53 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function pulaLinha() 
+
+    	{
+        	document.write("<br>");
+        	document.write("<br>");
+		}
+
+    function mostra(frase) 
+
+    	{
+        	document.write(frase);
+        	pulaLinha();
+		}
+
+
+    var numMembros = parseInt(prompt("Olá, este é um programa que calcula a média das idades do seu núcleo familiar. Quantos membros sua família possui?"));
+    var numIndividuo = 1;
+    var idadeMembros = 0;
+
+    while (isNaN(numMembros))
+
+	    {
+	    	var numMembros = parseInt(prompt("Por favor, para podermos começar insira o número de membros que sua família possui."));
+	    }
+
+    while (numIndividuo <= numMembros)
+
+    	{	
+
+	    	var perguntaIdade = parseInt(prompt("Insira a idade do familiar numero " + numIndividuo) + ".");
+
+	    	if (isNaN(perguntaIdade) == false)
+
+			    {
+			    	var idadeMembros = idadeMembros + perguntaIdade;
+			    	numIndividuo++; 
+			    }
+    	}
+
+    var mediaIdadeMembros = idadeMembros / numMembros;
+
+    mostra ("A média da idades dos membros de sua família é " + mediaIdadeMembros + ".")
+
+
+</script>
+
+
+
+			
